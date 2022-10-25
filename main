@@ -1,0 +1,9 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=4,walltime=00:10:00
+#PBS -N change_strides
+#PBS -l vmem=4gb
+
+set -x
+set -e
+
+time singularity exec -e --nv docker://brainlife/mrtrix3:3.0.2 ./change_strdes.sh
